@@ -1,6 +1,6 @@
 // List of products
 const products = [
-    { id: 1, name: 'BLUETOOTH EARBUDS M10', price: 359, description: 'High-quality product designed for your needs.', image: 'https://via.placeholder.com/150' },
+    { id: 1, name: 'BLUETOOTH EARBUDS M10', price: 359, description: 'M10 TWS Earbuds 2500mAh Charging Box Bluetooth-compatible Stereo.', image: 'https://via.placeholder.com/150' },
     { id: 2, name: 'Product 2', price: 200, description: 'Another great product to meet your expectations.', image: 'https://via.placeholder.com/150' }
 ];
 
@@ -19,13 +19,13 @@ const renderProducts = () => {
             card.className = 'col-md-4 product-card';
             card.innerHTML = `
                 <div class="card">
-                    <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                    <img src="৳{product.image}" class="card-img-top" alt="৳{product.name}">
                     <div class="card-body">
-                        <h5 class="card-title">${product.name}</h5>
-                        <p class="card-text">${product.description}</p>
-                        <p class="text-muted">$${product.price}</p>
-                        <a href="product-${product.id}.html" class="btn btn-info">View Details</a>
-                        <button class="btn btn-primary add-to-cart" data-id="${product.id}">Add to Cart</button>
+                        <h5 class="card-title">৳{product.name}</h5>
+                        <p class="card-text">৳{product.description}</p>
+                        <p class="text-muted">৳৳{product.price}</p>
+                        <a href="product-৳{product.id}.html" class="btn btn-info">View Details</a>
+                        <button class="btn btn-primary add-to-cart" data-id="৳{product.id}">Add to Cart</button>
                     </div>
                 </div>
             `;
