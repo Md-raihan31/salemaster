@@ -1,0 +1,58 @@
+/* Navbar Styles */
+.custom-navbar {
+    background-color: #ADD8E6 !important; /* Light Blue */
+    color: white !important;
+}
+
+.custom-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    object-fit: contain; /* Keeps aspect ratio */
+    margin-right: 10px; /* Adds space between logo and text */
+}
+
+.custom-navbar .nav-link {
+    color: white !important;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #333 !important; /* Darker text on hover for contrast */
+}
+
+/* Footer Styles */
+.custom-footer {
+    background-color: #ADD8E6 !important; /* Light Blue */
+    color: white !important;
+}
+
+/* Product Card Styles */
+.product-card .card {
+    background-color: #E6F7FF !important; /* Lighter Blue for Cards */
+    border-color: #87CEEB !important; /* Light Blue Border */
+}
+
+.product-card .card-title, .product-card .card-text, .product-card .text-muted {
+    color: #333 !important; /* Text readability */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #87CEEB !important; /* Light Blue Button */
+    border-color: #87CEEB !important;
+}
+
+.btn-primary:hover {
+    background-color: #4682B4 !important; /* Slightly darker blue on hover */
+    border-color: #4682B4 !important;
+}
+
+/* Page Background */
+body {
+    background-color: #F0F8FF !important; /* Soft Light Blue */
+    color: #333; /* Text readability */
+}
