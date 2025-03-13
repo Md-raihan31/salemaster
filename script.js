@@ -1,6 +1,6 @@
 // List of products
 const products = [
-    { id: 1, name: 'Product 1', price: 100, description: 'High-quality product designed for your needs.', image: 'https://via.placeholder.com/150' },
+    { id: 1, name: 'BLUETOOTH EARBUDS M10', price: 359, description: 'High-quality product designed for your needs.', image: 'https://via.placeholder.com/150' },
     { id: 2, name: 'Product 2', price: 200, description: 'Another great product to meet your expectations.', image: 'https://via.placeholder.com/150' }
 ];
 
