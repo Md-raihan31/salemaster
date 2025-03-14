@@ -1,6 +1,6 @@
 // List of products
 const products = [
-    { id: 1, name: 'Product 1', price: 297, description: 'M10 TWS Earbuds 2500mAh Charging Box Bluetooth-compatible Stereo.', image: 'https://via.placeholder.com/150' },
+    { id: 1, name: 'M10 BUDS', price: 297, description: 'High-quality product designed for your needs.', image: 'images/product1.jpg' },
     { id: 2, name: 'Product 2', price: 200, description: 'Another great product to meet your expectations.', image: 'https://via.placeholder.com/150' }
 ];
 
@@ -23,7 +23,7 @@ const renderProducts = () => {
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>
                         <p class="card-text">${product.description}</p>
-                        <p class="text-muted">$${product.price}</p>
+                        <p class="text-muted">৳${product.price}</p> <!-- Updated currency symbol -->
                         <a href="product-${product.id}.html" class="btn btn-info">View Details</a>
                         <button class="btn btn-primary add-to-cart" data-id="${product.id}">Add to Cart</button>
                     </div>
@@ -62,7 +62,7 @@ const renderCart = () => {
             const li = document.createElement('li');
             li.className = 'list-group-item d-flex justify-content-between align-items-center';
             li.innerHTML = `
-                ${item.name} - $${item.price}
+                ${item.name} - ৳${item.price} <!-- Updated currency symbol -->
                 <button class="btn btn-sm btn-danger remove-from-cart" data-id="${item.id}">&times;</button>
             `;
             cartList.appendChild(li);
@@ -70,17 +70,7 @@ const renderCart = () => {
         });
 
         // Update total price
-        totalPriceElement.textContent = `$${totalPrice}`;
-
-        // Add event listener for "Remove from Cart" buttons
-        cartList.addEventListener('click', (e) => {
-            if (e.target.classList.contains('remove-from-cart')) {
-                const productId = parseInt(e.target.dataset.id);
-                const newCart = cart.filter(item => item.id !== productId);
-                saveCart(newCart);
-                renderCart(); // Re-render the cart
-            }
-        });
+        totalPriceElement.textContent = `৳${totalPrice}`; // Updated currency symbol
     }
 };
 
@@ -123,6 +113,20 @@ if (checkoutForm) {
         }
     });
 }
+
+// Display the "Under Construction" Popup
+window.addEventListener('load', () => {
+    const popup = document.getElementById('construction-popup');
+    const closeButton = document.getElementById('close-popup');
+
+    // Show the popup when the page loads
+    popup.style.display = 'block';
+
+    // Hide the popup when the "Close" button is clicked
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+});
 
 // Initialize the appropriate page
 if (document.getElementById('product-list')) {
