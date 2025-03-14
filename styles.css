@@ -1,58 +1,108 @@
-/* Navbar Styles */
-.custom-navbar {
-    background-color: #ADD8E6 !important; /* Light Blue */
-    color: white !important;
+/* General Body Styling */
+body {
+    background-color: #F0F8FF; /* Soft Light Blue Background */
+    color: #333; /* Text readability */
 }
 
-.custom-navbar .navbar-brand {
-    display: flex;
-    align-items: center;
+/* Navbar Styling */
+.custom-navbar {
+    background-color: #ADD8E6 !important; /* Light Blue Navbar */
+    color: white !important;
+    z-index: 1030; /* Ensure navbar stays on top of other elements */
+    padding: 10px 15px; /* Prevent overflow issues */
 }
 
 .navbar-logo {
-    width: 40px; /* Adjust size as needed */
-    height: 40px;
-    object-fit: contain; /* Keeps aspect ratio */
-    margin-right: 10px; /* Adds space between logo and text */
+    width: 40px; /* Set logo size */
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
 }
 
-.custom-navbar .nav-link {
-    color: white !important;
-}
-
-.custom-navbar .nav-link:hover {
-    color: #333 !important; /* Darker text on hover for contrast */
-}
-
-/* Footer Styles */
+/* Footer Styling */
 .custom-footer {
-    background-color: #ADD8E6 !important; /* Light Blue */
+    background-color: #ADD8E6 !important; /* Light Blue Footer */
     color: white !important;
 }
 
-/* Product Card Styles */
-.product-card .card {
-    background-color: #E6F7FF !important; /* Lighter Blue for Cards */
-    border-color: #87CEEB !important; /* Light Blue Border */
-}
-
-.product-card .card-title, .product-card .card-text, .product-card .text-muted {
-    color: #333 !important; /* Text readability */
-}
-
-/* Button Styles */
+/* Button Styling */
 .btn-primary {
     background-color: #87CEEB !important; /* Light Blue Button */
     border-color: #87CEEB !important;
+    color: white !important;
 }
 
 .btn-primary:hover {
-    background-color: #4682B4 !important; /* Slightly darker blue on hover */
+    background-color: #4682B4 !important; /* Darker Blue on hover */
     border-color: #4682B4 !important;
 }
 
-/* Page Background */
-body {
-    background-color: #F0F8FF !important; /* Soft Light Blue */
-    color: #333; /* Text readability */
+.btn-secondary {
+    background-color: #ADD8E6 !important; /* Light Blue Button */
+    border-color: #ADD8E6 !important;
+    color: white !important;
 }
+
+.btn-secondary:hover {
+    background-color: #87CEEB !important; /* Slightly Darker Blue Hover */
+    border-color: #87CEEB !important;
+}
+
+/* Popup Styling */
+.popup-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensures it stays above all other elements */
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    text-align: center;
+}
+
+.popup-content h2 {
+    color: #333; /* Heading text color */
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    color: #666; /* Paragraph text color */
+    margin-bottom: 20px;
+}
+
+.popup-content .btn-primary {
+    background-color: #87CEEB !important; /* Light Blue Button */
+    border-color: #87CEEB !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.popup-content .btn-primary:hover {
+    background-color: #4682B4 !important; /* Darker Blue on hover */
+    border-color: #4682B4 !important;
+}
+
+/* Product Section */
+.product-section {
+    margin-top: 80px; /* Add spacing to prevent overlap with navbar */
+}
+
+.product-section img {
+    border-radius: 10px; /* Add slight rounding for images */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
